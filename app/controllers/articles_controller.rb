@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def new
-    @articles = Article.new
+    @article = Article.new
+    @article.title = 'demo'
   end
   
   def create
