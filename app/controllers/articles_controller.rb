@@ -21,7 +21,6 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.create(title: params[:article][:title], content: params[:article][:content])
-    render json: @article
   end
 
   def destroy
