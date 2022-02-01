@@ -1,15 +1,23 @@
-<%= form_with(model: @article, local:true) do |form|%>
-<div class="mt-5">
-  <%= form.label :title%>
-  <%= form.text_field :title%>
-</div>
+<div class="container">
 
-<div class="mt-5">
-  <%= form.label :content%>
-  <%= form.rich_text_area :content%>
-</div>
+  <%= form_with(model: @article, local:true) do |form|%>
+  <div class="mt-5">
+    <%= form.label :title%>
+    <%= form.text_field :title%>
+  </div>
 
-<div>
-  <%= form.submit%>
+  <div class="mt-5">
+    <%= form.label :status%>
+    <%= form.number_field :status%>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :content%>
+    <%= form.rich_text_area :content%>
+  </div>
+
+  <div>
+    <%= form.submit%>
+  </div>
+  <%end%>
 </div>
-<%end%>
